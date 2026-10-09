@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Fri Sep 25 2026 16:34:53 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://my413468.s4hana.cloud.sap/sap/opu/odata4/sap/zsb_del_print_new/srvd/sap/zsd_del_print_new/0001/",
+    "appName": "delprintnew",
+    "appTitle": "Delivery Challan Print",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.148.10",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.32.0",
+    "template": "Basic V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

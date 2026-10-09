@@ -1,0 +1,80 @@
+<mvc:View controllerName="delprintnew.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout"   
+    xmlns:form="sap.ui.layout.form" 
+    xmlns:core="sap.ui.core" 
+    xmlns:f="sap.f">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <form:SimpleForm
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanL="4"
+                labelSpanXL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+                <form:content>
+                    <Label
+                        id="id_bill_doc_no"
+                        text="BillingDocument No"
+                        required="true"
+                        design="Bold"
+                    />
+                    <Input id="BillingDocNO" class="clearableControl" showValueHelp="true" showSuggestion="true" fieldHelpDisplay="BillingDocument" valueHelpRequest=".onValueHelpRequest"/>
+                    <Label id="id_bill_label" text="BillingDocument Date" required="true" design="Bold"/>
+                    <DatePicker id="datepicker" valueFormat="dd-MM-yyyy" required="true" displayFormat="dd-MM-yyyy">
+                        <layoutData>
+                            <l:GridData span="XL3 L4 M2 S8"/>
+                        </layoutData>
+                    </DatePicker>
+                    <Button text="Fetch" press="onGetDataPress" icon="sap-icon://message-success" type="Accept">
+                        <layoutData>
+                            <l:GridData span="XL2 L2 M4 S4"/>
+                        </layoutData>
+                    </Button>
+                </form:content>
+            </form:SimpleForm>
+            
+            <Table
+                id="OEMTable"
+                items="{/value}"
+                mode="SingleSelectLeft"
+                selectionChange="onTableSelectionChange">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Invoice Documents" />
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column hAlign="Center"><Text text="Billing Document" /></Column>
+                    <Column hAlign="Center"><Text text="Billing Document type" /></Column>
+                    <Column hAlign="Center"><Text text="Billing Document Date" /></Column>
+                    <Column hAlign="Center"><Text text="Distribution Channel" /></Column>
+                    <Column hAlign="Center"><Text text="Print" /></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{BillingDocument}"/>
+                            <Text text="{BillingDocumentType}"/>
+                            <Text text="{BillingDocumentDate}"/>
+                            <Text text="{DistributionChannel}"/>
+                            <Button icon="sap-icon://print" press="Generate_DocumentAll" visible="false" width="100px"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

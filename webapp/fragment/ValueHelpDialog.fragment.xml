@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        title="Select Billing Document"
+        items="{/ZI_DEL_PRINT_NEW}"
+        search=".onValueHelpSearch"
+        confirm=".onValueHelpClose"
+        cancel=".onValueHelpClose">
+        <StandardListItem
+            title="{BillingDocument}"
+            description="{BillingDocumentItem}" />
+    </SelectDialog>
+</core:FragmentDefinition>
